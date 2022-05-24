@@ -74,13 +74,12 @@ window.onload = function initial () {
         }
     }
     buttons.innerHTML = text
-    }
+
     catNames()
     alphaBtn();
     randomWord()
     guessWord()
 }
-
 
 function guessWord(){
     wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : "_")).join(' ')
