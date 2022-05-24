@@ -40,7 +40,9 @@ function guessWord(){
     console.log(wordStatus)
     console.log(letter)
     document.getElementById('word').innerText = wordStatus
-
+    if (!wordStatus.includes("_")){
+        document.getElementById("gameover").innerText = "You Win"
+    }
 }
 function buttonPress(button) {
     var letter = button.value
@@ -60,6 +62,7 @@ function buttonPress(button) {
             console.log("if satement")
             document.getElementById("gameover").innerText = "Game Over"
         }
+
     }
 }
 
