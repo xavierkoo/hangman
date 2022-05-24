@@ -60,7 +60,7 @@ function buttonPress(button) {
         }
         if(incorrect == maxIncorrect){
             console.log("if satement")
-            document.getElementById("gameover").innerText = "Game Over"
+            document.getElementById("gameover").innerText = `Game Over, answer was ${answer} `
         }
 
     }
