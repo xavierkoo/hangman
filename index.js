@@ -51,6 +51,16 @@ function reset() {
 
 }
 
+
+function update_word_list(chosen_cat){
+    value = categories[`${chosen_cat}`]
+    console.log(value)
+    wordList = value
+    randomWord()
+    guessWord()
+}
+
+
 window.onload = function initial () {
 
     var alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
@@ -72,7 +82,7 @@ window.onload = function initial () {
         var cat_keys = Object.keys(categories)
         for (const [key, value] of Object.entries(categories)) {
             console.log(key)
-            text += `<button id='cat' class = "button" value = '${key}' onclick="" >${key}</button>`
+            text += `<button id='cat' class = "button" value = '${key}' onclick="update_word_list('${key}')" >${key}</button>`
         };
         cats.innerHTML+=text
     }
