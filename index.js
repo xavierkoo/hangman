@@ -1,3 +1,20 @@
+const categories = {
+'Movies' : ['jumanji', 'avatar', 'titanic'], 
+'Food' : ['apple', 'orange', 'banana'], 
+'Animals' : ['jaguar', 'alligator', 'penguin']}
+
+const hint = {
+'jumanji' : ['Survival Comedy', 'The Rock'],
+'avatar' : ['Blue', 'Highest grossing film'],
+'titanic' : ['Shipwreck', 'Iceberg'],
+'apple' : ['Granny Smith', 'Red or green'],
+'orange' : ['Citrus', 'Same colour'],
+'banana' : ['Monkey', 'Split'],
+'jaguar' : ['Cat', 'Fast'],
+'alligator' : ['Long snout', 'Carnivore'],
+'penguin' : ['Flightless', 'Happy Feet'],
+}
+
 var wordList = ["grape", "apple", "orange"]
 var answer = ""
 var maxIncorrect = 10
@@ -14,7 +31,27 @@ function randomWord() {
     console.log(answer)
 }
 
-window.onload = function () {
+function getHint() {
+    if(hint_count < 2){
+        let clue = hint[answer][hint_count]
+        document.getElementById('clue').innerText = "Clue: " + clue
+        hint_count ++
+    }
+}
+
+function reset() {
+    incorrect = 0
+    hint_count = 0
+    guessed = []
+    document.getElementById('clue').innerText = "Clue: "
+
+    randomWord()
+    guessWord()
+    initial()
+
+}
+
+window.onload = function initial () {
 
     var alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -28,6 +65,17 @@ window.onload = function () {
         }
         buttons.innerHTML = text;
     }
+    
+        var catNames = function () {
+        cats = document.getElementById('catName')
+        var text = ""
+        for (var i = 0; i < categories.length; i++) {
+            text += `<button id='cat' class = "button" value = '${categories[i]}' onclick="" >${categories[i]}</button>`
+        }
+    }
+    buttons.innerHTML = text
+    }
+    catNames()
     alphaBtn();
     randomWord()
     guessWord()
