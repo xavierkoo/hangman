@@ -59,6 +59,9 @@ canvas {
     color: black;
 }
 
+#gameover{
+    font-size: 40px;
+}
 
 
 @media (max-width: 767px) {

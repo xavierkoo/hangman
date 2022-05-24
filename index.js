@@ -1,10 +1,11 @@
 var wordList = ["grape", "apple", "orange"]
 var answer = ""
-var maxIncorrect = 6
+var maxIncorrect = 10
 var incorrect = 0
 var guessed = []
 var status = null
-var letter = "1"
+var letter = "123"
+
 
 
 function randomWord() {
@@ -38,11 +39,8 @@ function guessWord(){
 
     console.log(wordStatus)
     console.log(letter)
-    document.getElementById('test').innerText = wordStatus
-    if (answer.includes(letter) ){
-        incorrect += 1
-        console.log(incorrect)
-    }
+    document.getElementById('word').innerText = wordStatus
+
 }
 function buttonPress(button) {
     var letter = button.value
@@ -51,6 +49,18 @@ function buttonPress(button) {
     guessed.push(letter)
     guessWord()
     console.log(letter)
+    console.log(incorrect)
+    if (!answer.includes(letter) ){
+        incorrect += 1
+        var image = `image/${incorrect}.jpg`
+        if(incorrect <= maxIncorrect){
+        document.getElementById("image").setAttribute("src",image)
+        }
+        if(incorrect == maxIncorrect){
+            console.log("if satement")
+            document.getElementById("gameover").innerText = "Game Over"
+        }
+    }
 }
 
 
