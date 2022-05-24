@@ -11,10 +11,12 @@ h1 {
   font-size: 40px;
   font-family: "Helvetica";
   color: #ffffff;
+  margin-bottom: 10px;
 }
 
 p {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 button {
