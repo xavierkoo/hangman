@@ -8,22 +8,26 @@ p {
 
 button {
     border-radius: 5px;
-    background:#34568B;
-    color:white;
+    background: #4988ee;
+    color: white;
     border: solid 1px white;
     font-size: 20px;
-    padding:18px 10px;
-    width:180px;
+    padding: 18px 10px;
+    width: 180px;
     margin: 10px;
 
 }
+.disable {
+    opacity: 0.3;
+}
 
-button:hover{
-    transition: 0.5s ease-in-out;;
+button:hover {
+    transition: 0.5s ease-in-out;
+    ;
     background: white;
     border: solid 1px white;
-    color:#34568B;
-  }
+    color: #34568B;
+}
 
 body {
     background-color: #34568B;
@@ -41,10 +45,10 @@ canvas {
 }
 
 #letters {
-    width:35px;
-    height:30px;
-    padding:0px;
-    background:#34568B;
+    width: 35px;
+    height: 30px;
+    padding: 0px;
+    background: #4988ee;
     border-radius: 10px;
     border: solid 1px white;
 }
@@ -53,18 +57,21 @@ canvas {
     background: white;
     border: solid 1px white;
     color: black;
-} 
+}
 
 
 
 @media (max-width: 767px) {
     #letters {
-    padding:0 0 0 15px;
-  }
+        padding: 0 0 0 15px;
     }
-  
+}
+
 @media (max-width: 480px) {
     #letters {
-    padding:0 0 0 25px;
-  }
+        padding: 0 0 0 25px;
     }
+}
+
+
+

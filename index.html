@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <script src="index.js"></script>
-    <div class="container">
-        <h1>HANGMAN</h1>
-        <p>Select an alphabet below to guess the word, or click hint for a clue</p>
-    </div>
-    <div class="container">
-        <div id="alphabtn"></div>
-        <p id="catName"></p>
-        <div id="blanks"></div>
-        <p id="lives"></p>
-        <p id="clue">Clue: </p>
-        <canvas id="drawing"></canvas>
-    </div>
-    <div class="btncontainer">
-        <button id="hint">HINT</button>
-        <button id="reset">PLAY AGAIN</button>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>HANGMAN</h1>
+    <p>Select an alphabet below to guess the word, or click hint for a clue</p>
+  </div>
+  <div class="container">
+    <div id="alphabtn"></div>
+    <p id="catName"></p>
+    <div id="blanks"></div>
+    <p id="lives"></p>
+    <p id="clue">Clue: </p>
+    <p id="test">  </p>
+    <canvas id="drawing"></canvas>
+  </div>
+  <div class="btncontainer">
+    <button id="hint">HINT</button>
+    <button id="reset">PLAY AGAIN</button>
+  </div>
+
+<script src="index.js"></script>
+</body>
+
+
 </html>
