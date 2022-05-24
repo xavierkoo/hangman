@@ -73,7 +73,6 @@ window.onload = function initial () {
             text += `<button id='cat' class = "button" value = '${categories[i]}' onclick="" >${categories[i]}</button>`
         }
     }
-    buttons.innerHTML = text
 
     catNames()
     alphaBtn();
