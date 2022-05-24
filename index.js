@@ -69,9 +69,12 @@ window.onload = function initial () {
         var catNames = function () {
         cats = document.getElementById('catName')
         var text = ""
-        for (var i = 0; i < categories.length; i++) {
-            text += `<button id='cat' class = "button" value = '${categories[i]}' onclick="" >${categories[i]}</button>`
-        }
+        var cat_keys = Object.keys(categories)
+        for (const [key, value] of Object.entries(categories)) {
+            console.log(key)
+            text += `<button id='cat' class = "button" value = '${key}' onclick="" >${key}</button>`
+        };
+        cats.innerHTML+=text
     }
 
     catNames()
