@@ -23,6 +23,7 @@ var incorrect = 0;
 var guessed = [];
 var status = null;
 var letter = "123";
+var hint_count = 0
 
 function randomWord() {
   answer = wordList[Math.floor(Math.random() * wordList.length)];
