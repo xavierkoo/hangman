@@ -11,3 +11,4 @@
 2. Select a category from the pop up screen
 3. Enjoy the game!
 4. Click "Play Again" to restart the game
+5. Click "Hint" to get a hint when you are stuck!
